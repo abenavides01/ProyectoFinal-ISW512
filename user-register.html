@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Andrea Benavides Zúñiga">
+    <meta name="author" content="Alison Alfaro Arias">
     <title>User Register - Aventones</title>
     <link rel="stylesheet" href="styles-register.css">
 </head>
@@ -17,7 +17,7 @@
             <form action="/register" method="POST">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="first-name">Firt Name</label>
+                        <label for="first-name">First Name</label>
                         <input type="text" id="first-name" name="first-name" required>
                     </div>
                     <div class="form-group">
@@ -62,14 +62,14 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="state">Estado</label>
+                        <label for="state">State</label>
                         <input type="text" id="state" name="state" required>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="city">State</label>
+                        <label for="city">City</label>
                         <input type="text" id="city" name="city" required>
                     </div>
                     <div class="form-group">
@@ -77,7 +77,11 @@
                         <input type="tel" id="phone" name="phone" required>
                     </div>
                 </div>
-                <a href="index.html" class="button">Sign Up</a>
+                
+                <!-- Botón de envío del formulario -->
+                <div class="form-row">
+                    <a href="index.html">Login</a>
+                </div>
             </form>
             <p class="login">Already an user? <a href="index.html">Login here</a></p>
             <p class="login">Register as driver? <a href="driver-register.html">Click here</a></p>
