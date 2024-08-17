@@ -89,7 +89,7 @@ function saveDriver() {
 
 	if (saveToLocalStorage('drivers', driver)) {
 		alert('Driver saved');
-		document.location.href = "./dashboard.html";
+		window.location.href = "index.html";
 	} else {
 		alert('There was an error registering the driver');
 	}
@@ -113,10 +113,14 @@ function loginButtonHandler(element) {
 	validateUser();
 }
 
-function registerUserButtonHandler(element) {
-	saveUser();
-}
+function registerButtonHandler(element) {
+	const userType = document.getElementById('type').value;
 
-function registerDriverButtonHandler(element) {
-	saveUser();
+    if (userType === 'driver') {
+        saveDriver();
+    } else if (userType === 'user') {
+        saveUser();
+    } else {
+        alert('Unknown user type.');
+    }
 }
