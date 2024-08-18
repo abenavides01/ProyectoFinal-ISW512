@@ -27,6 +27,12 @@ function saveUser() {
     const city = document.getElementById('city').value;
     const phone = document.getElementById('phone').value;
 
+    //Verifica si ambas contraseñas son iguales
+    if (password !== repeatpassword) {
+        alert('Las contraseñas no coinciden');
+        return; //Detener la ejecución si las contraseñas no coiciden
+    }
+
 	const user = {
 		username,
         firstname,
@@ -44,7 +50,7 @@ function saveUser() {
 
 	if (saveToLocalStorage('users', user)) {
 		alert('User saved');
-		document.location.href = "./dashboard.html";
+		document.location.href = "index.html";
 	} else {
 		alert('There was an error registering the user');
 	}
@@ -67,13 +73,19 @@ function saveDriver() {
     const typevehicule = document.getElementById('type-of-vehicle').value;
     const vehileyear = document.getElementById('vehicle-year').value;
     const vehiculeplate = document.getElementById('vehicle-plate').value;
+    
+    //Verifica si ambas contraseñas son iguales
+    if (password !== repeatpassword) {
+        alert('Las contraseñas no coinciden');
+        return; //Detener la ejecución si las contraseñas no coiciden
+    }
 
-	const driver = {
-		username,
+    const driver = {
+        username,
         firstname,
-		lastname,
+        lastname,
         email,
-		password,
+        password,
         repeatpassword,
         addres,
         country,
@@ -107,6 +119,9 @@ function bindEvents() {
 	if(document.getElementById('register-button')) {
 		document.getElementById('register-button').addEventListener('click', registerButtonHandler);
 	}
+    if(document.getElementById('login-button')) {
+        document.getElementById('login-button').addEventListener('click', validateUser);
+    }
 }
 
 function loginButtonHandler(element) {
