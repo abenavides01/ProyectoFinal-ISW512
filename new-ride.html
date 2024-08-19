@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrea Benavides Zúñiga">
+    <title>Aventones - New Ride</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <img src="aventones-logo.png" alt="Aventones Logo" class="logo-rides">
+        </div>
+        <div class="header-bottom">
+            <nav>
+                <ul>
+                    <li><a href="search-rides.html">Home</a></li>
+                    <li><a href="my-rides.html" class="active">Rides</a></li>
+                    <li><a href="view-bookins.html">Bookings</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button><img src="user-icon.png" alt="User Icon"></button>
+                <div class="dropdown">
+                    <button class="dropbtn">Settings</button>
+                    <div class="dropdown-content">
+                        <a href="index.html">Logout</a>
+                        <a href="settings-edit-profile.html">Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>New Ride</h1>
+        <form class="new-ride-form">
+            <div class="ride-bottom">
+                <div class="ride-group">
+                    <label for="departure">Departure from</label>
+                    <input type="text" id="departure" name="departure">
+                </div>
+                <div class="ride-group">
+                    <label for="arrival">Arrive To</label>
+                    <input type="text" id="arrival" name="arrival">
+                </div>
+            </div>
+            <fieldset class="option-days">
+                <div class="ride-group-days">
+                    <label>Days</label>
+                    <div>
+                        <label><input type="checkbox" name="days" value="mon"> Mon</label>
+                        <label><input type="checkbox" name="days" value="tue"> Tue</label>
+                        <label><input type="checkbox" name="days" value="wed"> Wed</label>
+                        <label><input type="checkbox" name="days" value="thu"> Thu</label>
+                        <label><input type="checkbox" name="days" value="fri"> Fri</label>
+                        <label><input type="checkbox" name="days" value="sat"> Sat</label>
+                        <label><input type="checkbox" name="days" value="sun"> Sun</label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="ride-bottom">
+                <div class="ride-group">
+                    <label for="time">Time</label>
+                    <select id="time" name="time">
+                        <option value="10:00">10:00 am</option>
+                        <option value="11:00">11:00 am</option>
+                        <option value="12:00">12:00 pm</option>
+                    </select>
+                </div>
+                <div class="ride-group">
+                    <label for="seats">Seats</label>
+                    <select id="seats" name="seats">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="ride-group">
+                    <label for="fee">Fee</label>
+                    <select id="fee" name="fee">
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                    </select>
+                </div>
+            </div>
+            <fieldset class="vehicle-details">
+                <legend>Vehicle Details</legend>
+                <div class="ride-group">
+                    <label for="make">Make</label>
+                    <select id="make" name="make">
+                        <option value="Nissan">Nissan</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Ford">Ford</option>
+                    </select>
+                </div>
+                <div class="ride-group">
+                    <label for="model">Model</label>
+                    <input type="text" id="model" name="model" placeholder="Car Model">
+                </div>
+                <div class="ride-group">
+                    <label for="year">Year</label>
+                    <select id="year" name="year">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                    </select>
+                </div>
+            </fieldset>
+            <div class="form-actions">
+                <a href="my-rides.html" class="cancel">Cancel</a>
+                <a href="my-rides.html" class="button">Save</a>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <a href="search-rides.html">Home</a>
+        <a href="my-rides.html">Rides</a>
+        <a href="view-bookins.html">Bookings</a>
+        <a href="settings-edit-profile.html">Settings</a>
+        <a href="index.html">Login</a>
+        <a href="user-register.html">Register</a>
+        <p>&copy; Aventones.com</p>
+    </footer>
+</body>
+
+</html>

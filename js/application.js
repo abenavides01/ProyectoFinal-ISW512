@@ -1,18 +1,49 @@
 //valida los datos del usuario
 function validateUser() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const errorElement = document.getElementById('error_msg');
+	// Obtener los valores del formulario
+	const fname = document.getElementById('username').value; // Ajusta según el ID del input de nombre
+	const password = document.getElementById('password').value; // Ajusta según el ID del input de contraseña
 
-    if (username == 'admin' && password == 'password') {
-        console.log('logged in');
-        errorElement.innerHTML = 'User is valid';
-        errorElement.setAttribute("style", "display:block;");
-    } else {
-        errorElement.innerHTML = 'Username or Password invalid';
-        errorElement.setAttribute("style", "display:block;");
-    }
+	if (fname && password) {
+		// Obtener los usuarios y conductores del localStorage
+		const users = JSON.parse(localStorage.getItem('users')) || [];
+		const drivers = JSON.parse(localStorage.getItem('drivers')) || [];
+
+		let matchedUser = null;
+
+		// Buscar en los usuarios
+		for (const user of users) {
+			if (user.fname === fname && user.password === password) {
+				matchedUser = user;
+				break; // Salir del bucle una vez que se encuentra una coincidencia
+			}
+		}
+
+		// Buscar en los conductores solo si no se encontró una coincidencia en usuarios
+		if (!matchedUser) {
+			for (const driver of drivers) {
+				if (driver.fname === fname && driver.password === password) {
+					matchedUser = driver;
+					break; // Salir del bucle una vez que se encuentra una coincidencia
+				}
+			}
+		}
+
+		// Ahora puedes usar matchedUser según sea necesario
+		if (matchedUser) {
+			// Autenticación exitosa, proceder con el usuario autenticado
+			alert('User authenticated ');
+			window.location.href = './home2.html'; // Redirigir solo después de encontrar un usuario
+		} else {
+			// Autenticación fallida
+			alert('Invalid credentials');
+			// Mostrar mensaje de error al usuario, si lo deseas
+		}
+	} else {
+		alert('Please enter both username and password');
+	}
 }
+
 //guarda los datos del usuario
 function saveUser() {
 	const username = document.getElementById('username').value;
