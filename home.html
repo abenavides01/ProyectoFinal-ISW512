@@ -4,73 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aventones - Search rides</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles-general.css">
+    <title>Home</title>
 </head>
 
 <body>
-    <header>
-        <div class="header-top">
-            <img src="img/aventones-logo.png" alt="Aventones Logo" class="logo-rides">
+    <div id="map" class="hoja-container">
+        <!-- Imagen del logo centrada -->
+        <div class="logo-section">
+            <img src="img/aventones-logo.png" alt="logo">
+            <h1>AVENTONES</h1>
         </div>
-        <div class="header-bottom">
-            <nav>
-                <ul>
-                    <li><a href="home.html" class="active">Home</a></li>
-                    <li><a href="my-rides.html">Rides</a></li>
-                    <li><a href="bookins.html">Bookings</a></li>
-                </ul>
-            </nav>
-            <div class="search-container">
-                <input type="text" placeholder="Search...">
-                <button><img src="img/user-icon.png" alt="User Icon"></button>
-                <div class="dropdown">
-                    <button class="dropbtn">Settings</button>
-                    <div class="dropdown-content">
-                        <a href="index.html">Logout</a>
-                        <a href="settings-edit-profile.html">Settings</a>
-                    </div>
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <!-- Enlaces de navegación -->
+            <a href="home.html" class="nav-link">Home</a>
+            <a id="ridesLink" href="my-rides.html" class="nav-link">Rides</a>
+            <a href="bookins.html" class="nav-link">Booking</a>
+            <input type="text" class="search-input" placeholder="Search...">
+
+            <!-- Icono de perfil con un menú desplegable -->
+            <div class="icon-wrapper" tabindex="0">
+                <i class="fas fa-user" id="profile-icon"></i>
+                <div class="dropdown-menu">
+                    <a href="settings.html" class="dropdown-item">Settings</a>
+                    <a href="index.html" class="dropdown-item">Logout</a>
                 </div>
             </div>
-        </div>
-    </header>
-    <main>
-        <h1>Search rides</h1>
-        <form class="search-form">
-            <div class="ride-bottom">
-                <div class="ride-group">
+        </nav>
+
+        <h5>Search Rides</h5>
+        <div id="home" class="info-box">
+            <!-- Formulario de búsqueda de rides -->
+            <div class="form-row">
+                <div class="form-group">
                     <label for="from">From</label>
-                    <select id="from" name="from">
-                        <option value="Quesada">Quesada</option>
-                        <option value="Naranjo">Naranjo</option>
-                        <option value="Zarcero">Zarcero</option>
-                        <option value="AguasZarcas">Aguas Zarcas</option>
+                    <select id="from" name="from" required>
+                        <option value="">Select Origin</option>
+                        <option value="ciudad quesada">Ciudad Quesada</option>
+                        <option value="venecia">Venecia</option>
+                        <option value="zarcero">Zarcero</option>
+                        <option value="rio cuarto">Rio Cuarto</option>
+                        <option value="pital">Pital</option>
+                        <option value="aguas zarcas">Aguas Zarcas</option>
                     </select>
                 </div>
-                <div class="ride-group">
+                <div class="form-group">
                     <label for="to">To</label>
-                    <select id="to" name="to">
-                        <option value="Zarcero">Zarcero</option>
-                        <option value="Quesada">Quesada</option>
-                        <option value="Naranjo">Naranjo</option>
-                        <option value="AguasZarcas">Aguas Zarcas</option>
+                    <select id="to" name="to" required>
+                        <option value="">Select Destination</option>
+                        <option value="rio cuarto">Rio Cuarto</option>
+                        <option value="ciudad quesada">Ciudad Quesada</option>
+                        <option value="venecia">Venecia</option>
+                        <option value="zarcero">Zarcero</option>
+                        <option value="pital">Pital</option>
+                        <option value="aguas zarcas">Aguas Zarcas</option>
                     </select>
                 </div>
-                <a href="my-rides.html" class="button">Find Rides</a>
             </div>
-            <div class="ride-group-days">
+
+            <!-- Sección de selección de días -->
+            <div class="form-group">
                 <label>Days</label>
-                <div>
-                    <label><input type="checkbox" name="days" value="mon" checked> Mon</label>
-                    <label><input type="checkbox" name="days" value="tue"> Tue</label>
-                    <label><input type="checkbox" name="days" value="wed" checked> Wed</label>
-                    <label><input type="checkbox" name="days" value="thu"> Thu</label>
-                    <label><input type="checkbox" name="days" value="fri" checked> Fri</label>
-                    <label><input type="checkbox" name="days" value="sat"> Sat</label>
-                    <label><input type="checkbox" name="days" value="sun"> Sun</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="mon" name="days" value="mon" checked>
+                    <label for="mon">Mon</label>
+                    <input type="checkbox" id="tue" name="days" value="tue" checked>
+                    <label for="tue">Tue</label>
+                    <input type="checkbox" id="wed" name="days" value="wed" checked>
+                    <label for="wed">Wed</label>
+                    <input type="checkbox" id="thu" name="days" value="thu" checked>
+                    <label for="thu">Thu</label>
+                    <input type="checkbox" id="fri" name="days" value="fri" checked>
+                    <label for="fri">Fri</label>
+                    <input type="checkbox" id="sat" name="days" value="sat">
+                    <label for="sat">Sat</label>
+                    <input type="checkbox" id="sun" name="days" value="sun">
+                    <label for="sun">Sun</label>
                 </div>
             </div>
-        </form>
+
+            <!-- Botón para buscar rides -->
+            <button id="btn" class="buttonLogin">Find Rides</button>
+        </div>
+
+        <!-- Tabla de rides -->
         <table class="rides-table">
             <thead>
                 <tr>
@@ -83,49 +102,32 @@
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>abenavides</td>
-                    <td>Quesada</td>
-                    <td>Alajuela</td>
-                    <td>2</td>
-                    <td>Nissan Pathfinder 2015</td>
-                    <td>$5</td>
-                    <td><a href="#" class="request">View</a></td>
-                </tr>
-                <tr>
-                    <td>abenavides</td>
-                    <td>Quesada</td>
-                    <td>Naranjo</td>
-                    <td>1</td>
-                    <td>Toyota Corolla 2020</td>
-                    <td>$10</td>
-                    <td><a href="#" class="request">View</a></td>
-                </tr>
-                <tr>
-                    <td>barroyo</td>
-                    <td>Aguas Zarcas</td>
-                    <td>Naranjo</td>
-                    <td>1</td>
-                    <td>Ford Festiva 1990</td>
-                    <td>$15</td>
-                    <td><a href="#" class="request">View</a></td>
-                </tr>
+            <tbody id="ridesTableBody">
             </tbody>
         </table>
-        <div class="map">
-            <img src="img/mapa.png.png" alt="Map">
-        </div>
-    </main>
-    <footer>
-        <a href="home.html">Home</a>
-        <a href="my-rides.html">Rides</a>
-        <a href="bookins.html">Bookings</a>
-        <a href="settings.html">Settings</a>
-        <a href="index.html">Login</a>
-        <a href="user-register.html">Register</a>
+
+        <!-- Mapa de Google -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1387.7843482079643!2d-84.43550286022493!3d10.322115798051954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scr!4v1721142673249!5m2!1ses!2scr"
+            class="centered-large map" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Pie de página -->
+    <hr>
+    <footer class="footer">
+        <p>
+            <!-- Enlaces de navegación en el pie de página -->
+            <a href="home.html" target="_blank">Home</a> |
+            <a href="my-rides.html" target="_blank">Rides</a> |
+            <a href="bookins.html" target="_blank">Booking</a> |
+            <a href="settings.html" target="_blank">Settings</a> |
+            <a href="index.html" target="_blank">Login</a> |
+            <a href="user-register.html" target="_blank">Register</a>
+        </p>
+        <!-- Derechos de autor -->
         <p>&copy; Aventones.com</p>
     </footer>
+    <script src="js/search-ride.js"></script>
 </body>
-
 </html>
