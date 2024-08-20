@@ -103,13 +103,7 @@ body {
   /* Centra horizontalmente los elementos */
   text-align: center;
   /* Alinea el texto dentro del contenedor */
- 
- 
- 
 }
-
-
-
 
 /*Contenedores*/
 .hoja-container {
@@ -129,28 +123,24 @@ body {
   max-width: 1500px;
   margin: 80px auto;
   padding: 5px;
-
-
 }
 
 .verRides-container {
   background-color: #fff;
   text-align: center;
-  max-width: 1000px;
-  margin: 80px auto;
+  max-width: 1200px;
+  margin: 100px auto;
   padding: 50px;
-
-
 }
 
 .container {
   background-color: #fdfdfd;
   text-align: center;
-  max-width: 600px;
+  max-width: 800px;
   margin: 30px auto;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgb(16, 16, 176);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  
 }
 
 /* Estilos para el contenedor de información del vehículo */
