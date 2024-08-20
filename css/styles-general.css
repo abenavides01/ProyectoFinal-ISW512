@@ -1,482 +1,1011 @@
-/* Definición de variables para temas de color y estilos */
+
 :root {
-    --font-family: Arial, sans-serif;
-    --background-color: #f4f4f4;
-    --box-background-color: #fff;
-    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    --primary-color: #73c527;
-    --primary-text-color: rgb(0, 0, 0);
-    --secondary-text-color: #08a710;
-    --footer-background-color: #000000;
-    --footer-text-color: #333333;
-    --footer-link-color: #73c527;
-    --input-border-color: #ccc;
-    --link-color: #73c527;
-    --button-hover-bg-color: #5ea91f;
-    --button-hover-text-color: #fff;
-    --nav-bg-color: #f4f4f4;
-    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  --default-height: 500px; /* Altura por defecto */
+  --hoja-container-height-ride: 1100px; /* Altura específica para el ID ride */
+  --hoja-container-height-regis: 1000px; /* Altura específica para el ID regis */
+  --hoja-container-height-book: 700px;
+  --hoja-container-height-map: 1400px;
+  --ride-info-box-height: 300px;  
+  --button-width: 150px; /* Ancho del botón */
+
   
-/* Estilo general del cuerpo */
+}
+#regis{
+  height: var(--hoja-container-height-regis);
+}
+#ride{
+  height: var(--hoja-container-height-ride);
+}
+#book{
+  height: var(--hoja-container-height-book);
+}
+#btn{
+  width: var(--button-width);
+
+}
+#map{
+  height: var(--hoja-container-height-map);
+}
+
+#home{
+  max-height: var(--ride-info-box-height);
+
+}
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 50px;
+  font-weight: 20;
+  letter-spacing: 5px;
+  color: #000000;
+  text-align: center;
+}
+
+h5 {
+  font-size: 50px;
+  font-weight: 10;
+  color: #787676;
+  letter-spacing: 5px;
+  margin-top: 50px;
+  text-align: center;
+
+}
+
+h2 {
+  font-family: Calibri;
+  text-align: center;
+  font-size: 30px;
+  color: #030303;
+  padding: 20px;
+}
+
+h3 {
+  font-family: Calibri;
+  font-size: 20px;
+  color: #030303;
+  font-weight: 15;
+
+}
+
+h4 {
+  font-family: Calibri;
+  font-size: 30px;
+  color: #030303;
+  font-weight: 1000;
+  text-align: center;
+  padding: 0px;
+}
+
+p {
+  display: block;
+  margin-top: 10px;
+  font-size: 25px;
+  text-align: center;
+  color: #787676;
+}
+
 body {
-    font-family: var(--font-family);
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh
-  }
-
-  /* Estilo del encabezado */
-header {
-    width: 100%;
-    text-align: center;
-    background-color: #fff;
-    box-shadow: var(--box-shadow);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
-  
-  /* Encabezado superior con logo */
-  .header-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  /* Encabezado inferior con navegación y barra de búsqueda */
-  .header-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--nav-bg-color);
-    padding: 10px 20px;
-  }
-  
-  /* Contenedor del logo */
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-rides {
-    height: 50px;
-  }
-  
-  .header-bottom nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+  font-family: Calibri;
+}
+.custom-label {
+  font-size: 24px; /* Tamaño de fuente más grande */
+  color:#787676; /* Color del texto, por ejemplo, azul */
+  font-weight: bold; /* Negrita para destacar */
+  display: block; /* Hacer que ocupe toda la línea */
+  margin-bottom: 10px; /* Espacio debajo de la etiqueta */
 }
 
-.header-bottom nav ul li {
-    margin: 0 20px;
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  /* Centra verticalmente los elementos */
+  justify-content: center;
+  /* Centra horizontalmente los elementos */
+  text-align: center;
+  /* Alinea el texto dentro del contenedor */
+ 
+ 
+ 
 }
 
-.header-bottom nav ul li a {
-    text-decoration: none;
-    color: var(--primary-text-color);
-    font-weight: bold;
+
+
+
+/*Contenedores*/
+.hoja-container {
+  background-color: #fff;
+  text-align: center;
+  max-width: 800px;
+  margin: 80px auto;
+  margin-top: 10px;
+  padding: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: var(--hoja-container-height, var(--default-height));
 }
 
-.header-bottom nav ul li a.active {
-    color: var(--primary-color);
+.home-container {
+  background-color: #fff;
+  text-align: center;
+  max-width: 1500px;
+  margin: 80px auto;
+  padding: 5px;
+
+
 }
 
-/* Estilo de la tabla */
-table {
-  width: 100%;
-  border-collapse: collapse;
+.verRides-container {
+  background-color: #fff;
+  text-align: center;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 50px;
+
+
+}
+
+.container {
+  background-color: #fdfdfd;
+  text-align: center;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgb(16, 16, 176);
+}
+
+/* Estilos para el contenedor de información del vehículo */
+.info-box {
+  border: 2px solid #d6d8db;
+  /* Borde sólido */
+  padding: 20px;
+  /* Espacio interno */
   margin: 20px 0;
-  box-shadow: var(--box-shadow);
-}
-
-table th, table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-table th {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-
-table td a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-table td a:hover {
-  text-decoration: underline;
-}
-
-/* Contenedor de la búsqueda */
-.search-container {
-    display: flex;
-    align-items: center;
-}
-
-.search-container input {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-container button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.search-container button img {
-    height: 24px;
-}
-
-/* Contenedor inferior de la búsqueda */
-.ride-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 800px;
-    box-sizing: border-box;
-    margin: auto;
-  }
-
-/* Dropdown del contenedor de búsqueda */
-.search-container .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.search-container .dropdown .dropbtn {
-  background: none;
-  border: none;
-  font-size: 16px;
-}
-
-.search-container .dropdown .dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
+  /* Margen superior e inferior */
+  border-radius: 5px;
+  /* Bordes redondeados */
   background-color: #f9f9f9;
-  min-width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  /* Color de fondo */
+  max-height: var(--ride-info-box-height);
+  
+  
 }
 
-.search-container .dropdown .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+/* Estilos para el contenedor de información del viaje */
+.ride-info-box {
+  border: 2px solid #a0a2a5;
+  /* Borde sólido */
+  margin: 20px auto;
+  /* Margen automático en los lados */
+  background-color: #f9f9f9;
+  /* Color de fondo */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  text-align: center;
+  /* Alineación del texto al centro */
+  max-width: 1px;
+  /* Ancho máximo */
+}
+
+
+/* Estilo para el botón de nueva entrada */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  margin-top: 1000px;
+}
+
+/*Botones*/
+.buttonLogin {
+  padding: 10px 20px;
+  /* Estilo cuadrado */
+  border-radius: 5px;
+  /* Borde redondeado */
+  width: 60px;
+  background-color: dodgerblue;
+  font-size: 20px;
+  /* Tamaño de la letra */
   text-decoration: none;
-  display: block;
+  /* Elimina línea de enlace */
+  font-family: Calibri;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  display: flex;
+  /* Usar flexbox para alinear elementos */
+  margin: 100px auto;
+  justify-content: center;
+  /* Centrar horizontalmente los elementos */
+  transition: transform 0.2s, box-shadow 0.2s;
+  justify-content: space-between;
+  justify-content: center;
+  border: none; /* Elimina el borde */
+
+
+
 }
 
-.search-container .dropdown .dropdown-content a:hover {
+.buttonSingUp {
+  padding: 10px 20px;
+  /* Estilo cuadrado */
+  border-radius: 10px;
+  /* Borde redondeado */
+  width: 150px;
+  background-color: rgb(82, 84, 85);
+  font-size: 20px;
+  /* Tamaño de la letra */
+  text-decoration: none;
+  /* Elimina línea de enlace */
+  font-family: Calibri;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  display: flex;
+  /* Usar flexbox para alinear elementos */
+  margin: 50px auto;
+  /* Centra el botón horizontalmente */
+  justify-content: center;
+  /* Centrar horizontalmente los elementos */
+  transition: transform 0.2s, box-shadow 0.2s;
+  /* Transiciones suaves */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  /* Agregar sombra */
+  
+
+
+
+
+}
+
+.buttonLogin:hover {
+  transform: scale(1.1);
+  /* Aumenta el tamaño al hacer hover */
+ 
+  /* Sombra más pronunciada */
+}
+
+.buttonGoggle {
+  padding: 10px 20px;
+  /* Estilo cuadrado */
+  border-radius: 15px;
+  /* Borde redondeado */
+  width: 250px;
+  background-color: rgb(249, 249, 249);
+  font-size: 20px;
+  /* Tamaño de la letra */
+  text-decoration: none;
+  /* Elimina línea de enlace */
+  font-family: Calibri;
+  text-align: center;
+  color: dodgerblue;
+  display: flex;
+  /* Usar flexbox para alinear elementos */
+  margin: 50px auto;
+  justify-content: center;
+  /* Centrar horizontalmente los elementos */
+  transition: transform 0.2s, box-shadow 0.2s;
+  /* Transiciones suaves */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  /* Agregar sombra */
+  /* Establecer imagen a la izquierda */
+  background-image: url(Images/iconoGoogle.jpg);
+  background-size: 30px;
+  /* Tamaño de la imagen */
+  background-position: 10px center;
+  /* Ajusta la posición de la imagen */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+
+
+}
+
+.buttonGoggle:hover {
+  transform: scale(1.1);
+  /* Aumenta el tamaño al hacer hover */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  /* Sombra más pronunciada */
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 600px;
+
+ 
+}
+
+/* Estilo del botón New Ride */
+.new-ride2-btn {
+  padding: 10px 20px;
+  width: var(--button-width);
+  background-color: dodgerblue;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: Calibri;
+  text-align: center;
+  color: #fff;
+  display: block; /* Cambiado a block para asegurar que el botón se muestre correctamente */
+  margin: 50px auto;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer; /* Asegura que el cursor cambie al pasar sobre el botón */
+}
+
+
+/*Estilo para los labes de cada input */
+.input label {
+  display: block;
+  margin-top: 10px;
+  font-family: Calibri;
+  font-size: 20px;
+  padding-right: 55%;
+ 
+ 
+  
+
+}
+
+/*Estilo para cuadro de input*/
+.input input {
+  display: block;
+  font-family: Calibri;
+  font-size: px;
+  /* Tamaño de fuente más grande */
+  width: 400px;
+  /* Ancho del contenedor */
+  padding: 10px;
+  /* Ajusta este valor para cambiar el padding */
+  margin: 5px auto;
+  /* Centra los inputs */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+/*Estilo para el formulario de Registro */
+
+
+/* Estilo para el grupo de formulario (contenedor de cada campo del formulario) */
+.form-group {
+  margin-bottom: 15px;
+  /* Margen inferior */
+  text-align: left;
+  /* Alineación del texto a la izquierda */
+}
+
+/* Estilo para la fila del formulario (contenedor para filas de campos en el formulario) */
+.form-row {
+  display: flex;
+  /* Mostrar como flexbox para alinear elementos */
+  justify-content: space-between;
+  /* Distribuir el espacio entre los elementos */
+  margin-bottom: 15px;
+  /* Margen inferior */
+}
+
+/* Estilo para la etiqueta del campo del formulario */
+.form-group label {
+  display: block;
+  /* Mostrar como bloque para ocupar el ancho completo */
+  margin-bottom: 5px;
+  /* Margen inferior */
+  font-weight: bold;
+  /* Peso de la fuente en negrita */
+  font-size: 20px;
+  /* Tamaño de la fuente */
+}
+
+/* Estilo para los campos de entrada y select del formulario */
+.form-group input,
+.form-group select {
+  width: 100%;
+  /* Ancho completo del contenedor */
+  padding: 10px;
+  /* Relleno interior */
+  font-size: 20px;
+  /* Tamaño de la fuente */
+  box-sizing: border-box;
+  /* Incluir el borde y el relleno en el ancho total */
+  border: 1px solid #ccc;
+  /* Borde delgado de color gris */
+  border-radius: 4px;
+  /* Bordes redondeados */
+}
+
+/* Estilo para los grupos de formulario en filas (dividir en varias columnas) */
+.form-row .form-group {
+  flex: 1;
+  /* Ocupar todo el espacio disponible */
+  margin-right: 5px;
+ 
+  
+  /* Margen derecho entre los grupos */
+}
+
+/* Estilo para el último grupo de formulario en filas (eliminar margen derecho) */
+.form-row .form-group:last-child {
+  margin-right: 0;
+  /* Sin margen derecho */
+}
+
+/* Estilo para el grupo de formulario de ancho completo */
+.form-group.full-width {
+  text-align: center;
+  /* Alineación del texto al centro */
+  margin-top: 20px;
+  /* Margen superior */
+}
+
+/* Estilo para la fila de enlaces (contenedor de enlaces en el formulario) */
+.form-row.links {
+  display: flex;
+  /* Mostrar como flexbox para alinear elementos */
+  flex-direction: row;
+  /* Dirección de fila (horizontal) */
+  justify-content: center;
+  /* Centrar horizontalmente todos los elementos */
+  align-items: center;
+  /* Centrar verticalmente todos los elementos */
+}
+
+/* Estilo para elementos de enlace en la fila de enlaces */
+.link-item {
+  margin: 0 10px;
+  /* Margen a los lados de cada elemento de enlace */
+}
+
+/*Pie de Pagina*/
+footer p a {
+  text-decoration: none;
+  /* Elimina el subrayado */
+  color: #808080;
+  /* Cambia el color a gris */
+  margin: 0 10px;
+  /* Agrega un margen entre los enlaces del footer */
+  font-size: 16px; /* Tamaño de la letra */
+}
+
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  /* Mostrar como flexbox para alinear elementos */
+  justify-content: space-around;
+  /* Distribuir el espacio entre los elementos */
+  background-color: #f8f8f8;
+  /* Color de fondo de la barra de navegación */
+  padding: 5px;
+  /* Relleno interior */
+  width: 100%;
+  /* Ancho del contenedor de la barra de navegación */
+  margin-top: 20px;
+  /* Centrar la barra de navegación horizontalmente */
+ 
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-link {
+  color: #333;
+  /* Color del texto de los enlaces */
+  text-decoration: none;
+  /* Sin subrayado en los enlaces */
+  padding: 10px;
+  /* Relleno interior */
+  font-size: 25px;
+  /* Tamaño de la fuente de los enlaces */
+  margin: 0;
+  /* Eliminar márgenes exteriores */
+  transition: color 0.3s ease;
+  /* Transición suave del color */
+}
+
+/* Estilo al hacer hover o enfoque en los enlaces de navegación */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  background-color: #007BFF;
+  /* Color de fondo al hacer hover, enfoque o activo */
+  color: #fff;
+  /* Color del texto al hacer hover, enfoque o activo */
+}
+
+
+/* Estilo para el input de búsqueda */
+.search-input {
+  padding: 10px;
+  /* Relleno interior */
+  font-size: 25px;
+  /* Tamaño de la fuente */
+  border: 1px solid #ccc;
+  /* Borde delgado de color gris */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  width: 150px;
+  /* Ancho fijo para el campo de búsqueda */
+  margin-left: 150px;
+  /* Espacio a la izquierda del último enlace */
+}
+
+/* Estilo para el contenedor del icono */
+.icon-wrapper {
+  position: relative;
+  /* Posición relativa para el contenedor */
+  display: inline-block;
+  /* Mostrar como bloque en línea */
+  margin-left: 10px;
+  /* Margen a la izquierda */
+  cursor: pointer;
+  /* Cursor de puntero */
+  outline: none;
+  /* Quitar borde al hacer clic */
+}
+
+/* Estilo para el icono de perfil */
+#profile-icon {
+  font-size: 40px;
+  /* Tamaño de la fuente del icono */
+  color: #333;
+  /* Color del icono */
+  transition: color 0.3s ease;
+  /* Transición suave del color */
+  cursor: pointer;
+  /* Cursor de puntero */
+}
+
+/* Cambio de color al hacer hover sobre el icono de perfil */
+#profile-icon:hover {
+  color: #007bff;
+  /* Color del icono al hacer hover */
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-menu {
+  display: none;
+  /* Ocultar por defecto */
+  font-size: 30px;
+  /* Tamaño de la fuente del menú desplegable */
+  position: absolute;
+  /* Posición absoluta para fijar en la barra de navegación */
+  top: 35px;
+  /* Distancia desde la parte superior */
+  right: 0;
+  /* Alineación a la derecha */
+  background-color: #ffffff;
+  /* Color de fondo del menú */
+  border: 1px solid #ccc;
+  /* Borde delgado de color gris */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  z-index: 1000;
+  /* Índice z para superponer sobre otros elementos */
+}
+
+/* Estilo para los ítems del menú desplegable */
+.dropdown-item {
+  display: block;
+  /* Mostrar como bloque */
+  padding: 10px;
+  /* Relleno interior */
+  text-decoration: none;
+  /* Sin subrayado en los ítems */
+  color: #333;
+  /* Color del texto de los ítems */
+  transition: background-color 0.3s ease;
+  /* Transición suave del color de fondo */
+}
+
+/* Cambio de color de fondo al hacer hover sobre los ítems del menú desplegable */
+.dropdown-item:hover {
   background-color: #f1f1f1;
+  /* Color de fondo al hacer hover */
 }
 
-.search-container .dropdown:hover .dropdown-content {
+
+/* Estilos para la tabla de viajes */
+.rides-table {
+  width: 100%;
+  /* Ancho completo */
+  max-width: 2000px;
+  /* Ancho máximo */
+  border-collapse: collapse;
+  /* Colapsar bordes de celda */
+  margin: 20px auto;
+  /* Centrar la tabla horizontalmente */
+  overflow-x: auto;
+  /* Permitir desplazamiento horizontal si es necesario */
+}
+
+/* Encabezado de la tabla */
+.rides-table thead {
+  background-color: #474444;
+  /* Color de fondo del encabezado */
+}
+
+/* Estilos para las celdas de encabezado y cuerpo */
+.rides-table th,
+.rides-table td {
+  padding: 15px;
+  /* Relleno interior */
+  text-align: left;
+  /* Alineación del texto a la izquierda */
+  border: 1px solid #ccc;
+  /* Borde delgado de color gris */
+  font-size: 20px;
+  /* Tamaño de la fuente */
+}
+
+/* Estilos específicos para las celdas de encabezado */
+.rides-table th {
+  background-color: #f7f7f799;
+  /* Color de fondo */
+  position: sticky;
+  /* Elemento fijo en la parte superior */
+  top: 0;
+  /* Posición fija en la parte superior */
+  z-index: 1;
+  /* Z-index para superponer sobre el contenido */
+  text-align: center; /* Centra el texto horizontalmente */
+
+}
+
+/* Estilos para las celdas de cuerpo */
+.rides-table td {
+  white-space: nowrap;
+  /* No permitir saltos de línea en el texto largo */
+}
+
+/* Grupo de checkboxes */
+.checkbox-group {
+  display: flex;
+  /* Mostrar como flexbox */
+  justify-content: center;
+  /* Centrar los checkboxes horizontalmente */
+  gap: 10px;
+  /* Espacio entre los checkboxes */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+  display: none;
+  /* Ocultar por defecto */
+  position: absolute;
+  /* Posición absoluta */
+  top: 35px;
+  /* Distancia desde la parte superior */
+  right: 0;
+  /* Alineación a la derecha */
+  background-color: #ffffff;
+  /* Color de fondo */
+  border: 1px solid #ccc;
+  /* Borde delgado de color gris */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  z-index: 1000;
+  /* Índice z para superponer sobre otros elementos */
+}
+
+/* Estilos para los ítems del menú desplegable */
+.dropdown-item {
   display: block;
+  /* Mostrar como bloque */
+  padding: 5px;
+  /* Relleno interior */
+  text-decoration: none;
+  /* Sin subrayado en los ítems */
+  color: #000000;
+  /* Color del texto de los ítems */
+  transition: background-color 0.3s ease;
+  /* Transición suave del color de fondo */
 }
 
-  /* Botón de regresar */
-  .regresar {
-    text-decoration: none;
-    color: #000000;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .regresar::before {
-    content: '';
-    border: solid #000000;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 5px;
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-  }
-  
-  /* Estilo principal */
-  main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    text-align: center;
-    flex: 1;
-    padding: 80px 20px 20px;
-  }
-  
-  main h1 {
-    font-size: 24px;
-    color: var(--primary-color);
-    position: relative;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
-  
-  main h1::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #ccc;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  
-  /* Botón de nueva búsqueda */
-  .new-ride-button {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .new-ride-button:hover {
-    background-color: var(--button-hover-bg-color);
-  }
-  
-  .login-container,
-  .register-container, .setting-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    height: auto;
-    max-width: 600px;
-    margin: 20px;
-  }
-  
-  .login-box,
-  .register-box, .setting-box {
-    background-color: var(--box-background-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: var(--box-shadow);
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-  }
-  
-  .setting-box {
-    max-width: 800px;
-  }
-  
-  .ride-bottom .ride-group {
-    flex: unset;
-    margin-bottom: 10px;
-    margin: 10px;
+/* Cambio de color de fondo al hacer hover sobre los ítems del menú desplegable */
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+  /* Color de fondo al hacer hover */
+}
+
+/* Mostrar menú cuando el contenedor tiene el foco o está activo */
+.icon-wrapper:focus-within .dropdown-menu,
+.icon-wrapper:focus .dropdown-menu {
+  display: block;
+  /* Mostrar el menú desplegable */
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+  text-align: right;
+  /* Alineación del texto a la derecha */
+  margin: 20px 0;
+  /* Margen superior e inferior */
+}
+
+
+
+/* Estilos para el encabezado */
+.header {
+  display: flex;
+  /* Mostrar como flexbox */
+  justify-content: space-between;
+  /* Distribuir espacio entre los elementos */
+  align-items: center;
+  /* Alinear elementos verticalmente */
+  margin-bottom: 20px;
+  /* Margen inferior */
+}
+
+/* Estilos para el título h2 del encabezado */
+.header h2 {
+  margin: 0;
+  /* Eliminar márgenes */
+}
+
+/* Estilos para la imagen de usuario */
+.user img {
+  border-radius: 50%;
+  /* Borde redondeado */
+  width: 50px;
+  /* Ancho de la imagen */
+  height: 50px;
+  /* Altura de la imagen */
+}
+
+/* Estilos para el párrafo de usuario */
+.user p {
+  margin: 0;
+  /* Eliminar márgenes */
+  font-size: 14px;
+  /* Tamaño de la fuente */
+  text-align: center;
+  /* Alineación del texto al centro */
+}
+
+/* Estilos para los enlaces del menú */
+.menu a {
+  text-decoration: none;
+  /* Sin subrayado en los enlaces */
+  color: #007bff;
+  /* Color del texto de los enlaces */
+}
+
+/* Estilos al hacer hover sobre los enlaces del menú */
+.menu a:hover {
+  text-decoration: underline;
+  /* Subrayado al hacer hover */
+}
+
+/* Estilos para el formulario de reserva */
+.reservation-form {
+  display: flex;
+  /* Mostrar como flexbox */
+  flex-direction: column;
+  /* Dirección de columna para los elementos internos */
+  gap: 20px;
+  /* Espacio entre elementos */
+}
+
+/* Estilos para los contenedores de ruta, horario y vehículo */
+.route,
+.time-seats,
+.vehicle {
+  display: flex;
+  /* Mostrar como flexbox */
+  justify-content: space-between;
+  /* Distribuir espacio entre los elementos */
+}
+
+/* Estilos para el campo */
+.field {
+  display: flex;
+  /* Mostrar como flexbox */
+  flex-direction: column;
+  /* Dirección de columna para los elementos internos */
+  align-items: flex-start;
+  /* Alinear elementos a la izquierda */
+  gap: 5px;
+  /* Espacio entre elementos */
+}
+
+/* Estilos para los días */
+.days {
+  display: flex;
+  /* Mostrar como flexbox */
+  justify-content: space-between;
+  /* Distribuir espacio entre los elementos */
+  flex-wrap: wrap;
+  /* Envolver elementos en múltiples líneas */
+  gap: 10px;
+  /* Espacio entre elementos */
+}
+
+/* Estilos para cada día */
+.day {
+  width: 30px;
+  /* Ancho fijo para cada día */
+  text-align: center;
+  /* Alineación del texto al centro */
+}
+
+/* Estilos para las acciones */
+.actions {
+  display: flex;
+  /* Mostrar como flexbox */
+  justify-content: space-between;
+  /* Distribuir espacio entre los elementos */
+  gap: 10px;
+  /* Espacio entre elementos */
+}
+
+
+.centered-large {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  /* Puedes ajustar el ancho según tus necesidades */
+  max-width: 1800px;
+  /* Limita el ancho máximo */
+}
+
+.map {
+  width:100%;
+  height: 300px;
+  /* Ajusta la altura según tus necesidades */
+  border: 0;
+}
+
+
+
+
+
+/* Estilos generales para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+  :root {
+      --default-height: 300px; /* Ajustar altura por defecto para móviles */
+      --hoja-container-height-ride: 800px; /* Ajustar altura específica para el ID ride */
+      --hoja-container-height-regis: 700px; /* Ajustar altura específica para el ID regis */
+      --hoja-container-height-book: 500px;
+      --hoja-container-height-map: 1000px;
+      --ride-info-box-height: 200px;  
+      --button-width: 120px; /* Ajustar ancho del botón para móviles */
   }
 
-  .ride-group-days {
-    margin-bottom: 20px;
-    padding-left: 100px;
-  }
-  
-  .ride-group-days label {
-    display: inline-block;
-    margin-right: 10px;
+  #regis, #ride, #book, #map {
+      height: auto; /* Permitir que las alturas se ajusten automáticamente */
   }
 
-  /* Estilo del logo */
-  .logo {
-    display: block;
-    margin: 0 auto 20px auto;
-    max-width: 80%;
-    height: auto;
+  h1 {
+      font-size: 30px; /* Reducir tamaño de fuente para pantallas pequeñas */
   }
-  
-  /* Separador */
-  .or {
-    margin: 10px 0;
-    color: var(--secondary-text-color);
+
+  h5 {
+      font-size: 30px; /* Reducir tamaño de fuente para pantallas pequeñas */
+      margin-top: 30px; /* Ajustar margen superior */
   }
-  
-  /* Estilo general de formularios */
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  h2 {
+      font-size: 24px; /* Reducir tamaño de fuente */
   }
-  
+
+  h3 {
+      font-size: 18px; /* Reducir tamaño de fuente */
+  }
+
+  h4 {
+      font-size: 24px; /* Reducir tamaño de fuente */
+  }
+
+  p {
+      font-size: 18px; /* Reducir tamaño de fuente */
+  }
+
+  .custom-label {
+      font-size: 20px; /* Ajustar tamaño de fuente */
+  }
+
+  .hoja-container, .home-container, .verRides-container, .container {
+      max-width: 100%; /* Ajustar ancho máximo */
+      padding: 20px; /* Ajustar padding */
+  }
+
+  .info-box {
+      max-height: none; /* Permitir que la altura máxima se ajuste automáticamente */
+  }
+
+  .button-container {
+      flex-direction: column; /* Cambiar dirección de los botones a columna */
+      gap: 20px; /* Ajustar espacio entre botones */
+      margin-top: 20px; /* Ajustar margen superior */
+  }
+
+  .buttonLogin, .buttonSingUp, .buttonGoggle, .new-ride2-btn {
+      width: 100%; /* Ajustar ancho de los botones para pantallas pequeñas */
+  }
+
+  .input input {
+      width: 100%; /* Ajustar ancho de los inputs */
+  }
+
   .form-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    width: 48%;
-  }
-  
-  .full-width {
-    width: 100%;
-  }
-  
-  label {
-    text-align: left;
-    margin-bottom: 5px;
-    color: var(--secondary-text-color);
-  }
-  
-  input,
-  select {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--input-border-color);
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  /* Botón general */
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin-left: 190px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px #999;
-  }
-  
-  .button:hover {
-    background-color: var(--button-hover-bg-color);
-  }
-  
-  .button:active {
-    background-color: var(--button-hover-bg-color);
-    box-shadow: 0 2px #666;
-    transform: translateY(2px);
-  }
-  
-  /* Estilo de registro */
-  .register {
-    margin-top: 15px;
-    color: var(--footer-text-color);
-  }
-  
-  .register a {
-    color: var(--link-color);
-    text-decoration: none;
-  }
-  
-  .ride-info p {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .profile-pic {
-    display: block;
-    margin: 20px auto;
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-  }
-  
-  /* Estilo del footer*/
-  footer {
-    text-align: center;
-    width: 100%;
-    color: var(--footer-text-color);
-    font-size: 14px;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-top: 20px;
-    border-top: 1px solid #ccc;
-  }
-  
-  footer a {
-    margin: 0 10px;
-    color: var(--footer-link-color);
-    text-decoration: none;
-  }
-  
-  footer p {
-    margin-top: 10px;
-  }
-  
-/* Media Queries para dispositivos específicos */
-
-/* iPad Pro */
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
-  .text h1 {
-      font-size: 2.5em;
+      flex-direction: column; /* Cambiar dirección de fila a columna */
   }
 
-  .informacion h1 {
-      font-size: 24px;
+  .form-row .form-group {
+      margin-right: 0; /* Eliminar margen derecho */
+      margin-bottom: 15px; /* Ajustar margen inferior */
   }
 
-  .sign .btn-sign {
-      width: 20%;
+  .navbar {
+      flex-direction: column;
+      /* Cambia la dirección del flexbox a columna */
+      align-items: center;
+      /* Centra los elementos horizontalmente */
+      padding: 10px;
+      /* Ajusta el padding para dispositivos móviles */
+  }
+
+  .search-input {
+      width: 100%; /* Ajustar ancho del campo de búsqueda */
+      margin-left: 0; /* Eliminar margen izquierdo */
+  }
+
+  .header {
+      flex-direction: column; /* Cambiar dirección del encabezado a columna */
+      align-items: center; /* Centrar elementos verticalmente */
+  }
+
+  .user img {
+      width: 40px; /* Reducir tamaño de la imagen del usuario */
+      height: 40px;
   }
 }
 
-/* iPhone 14 */
-@media only screen and (min-device-width: 390px) and (max-device-width: 844px) {
-  .principal, .informacion, .sign {
-      flex-direction: column;
-      padding: 10px;
-  }
-
-  .text {
-      padding-left: 10px;
-  }
-
-  .text h1 {
-      font-size: 1.5em;
-  }
-
-  .informacion h1 {
-      font-size: 18px;
-  }
-
-  .sign .btn-sign {
-      width: 80%;
-  }
-
-  .input-container {
-      flex-direction: column;
-  }
-
-  .input-group {
+/* Estilos para las tablas en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .rides-table {
       width: 100%;
-      margin-right: 0;
+      /* Asegura que la tabla ocupe todo el ancho disponible */
+      overflow-x: auto;
+      /* Permite desplazamiento horizontal */
+      display: block;
+      /* Muestra la tabla como bloque para permitir el desplazamiento */
   }
 
-  .register-wrapper {
-      flex-direction: column;
+  .rides-table th, .rides-table td {
+      font-size: 16px;
+      /* Reduce el tamaño de la fuente para una mejor visualización en móviles */
+      padding: 10px;
+      /* Ajusta el padding de las celdas */
   }
+  
+}
+
+.google-login {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.google-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: rgb(66, 85, 255);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google-btn:hover {
+  background-color: #fdfdfd;
+}
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }

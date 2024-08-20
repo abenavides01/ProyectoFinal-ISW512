@@ -1,103 +1,133 @@
-<!DOCTYPE html>
-<html lang="es">
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Andrea Benavides Zúñiga">
-    <title>User Register - Aventones</title>
-    <link rel="stylesheet" href="css/styles-register.css">
+    <link rel="stylesheet" href="css/styles-general.css">
+    <title>Registro</title>
 </head>
-
 <body>
-    <main class="register-container">
-        <section class="register-box">
-            <img src="img/aventones-logo.png" alt="Logo de Aventones" class="logo">
-            <h1>User Registration</h1>
-            <form action="/register" method="POST">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" required>
-                    </div>
+    <div id="regis" class="hoja-container">
+        <div class="logo-section">
+            <!-- Imagen del logo con una anchura de 100px -->
+            <img src="img/aventones-logo.png" alt="logo" width="100">
+            <!-- Título de la página -->
+            <h1>AVENTONES</h1>
+        </div>
+    
+        <!-- Título de la sección de registro de usuario con un tamaño de fuente de 75px -->
+         <h5>User Registration</h5>
+        <div class="regis">
+            <!-- Formulario de registro -->
+            <div class="form-row">
+                <div class="form-group">
+                    <!-- Campo para el nombre -->
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName">
                 </div>
-
-                <div class="form-row">
-                    <div class="form-group full-width">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
+                <div class="form-group">
+                    <!-- Campo para el apellido -->
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName">
                 </div>
+            </div>
+            <div class="form-group">
+                <!-- Campo para el correo electrónico -->
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <!-- Campo para la contraseña -->
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
 
+                </div>
+                <div class="form-group">
+                    <!-- Campo para repetir la contraseña -->
+                    <label for="repeatPassword">Repeat Password:</label>
+                    <input type="password" id="repeatPassword" name="repeatPassword">
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <!-- Campo para la dirección -->
+                    <label for="address">Address:</label>
+                    <input type="text" id="address">
+                </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="repeat-password">Repeat Password</label>
-                        <input type="password" id="repeat-password" name="repeat-password" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group full-width">
-                        <label for="address">Address</label>
-                        <input type="text" id="address" name="address" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="country">Country</label>
-                        <select id="country" name="country" required>
-                            <option value="usa">United States</option>
-                            <option value="canada">Canada</option>
-                            <option value="mexico">Mexico</option>
-                            <option value="costa-rica">Costa Rica</option>
+                        <!-- Campo para el país con un menú desplegable de opciones -->
+                        <label for="country">Country:</label>
+                        <select id="country" name="country">
+                            <option value="cr">Costa Rica</option>
+                            <option value="ar">Argentina</option>
+                            <option value="bo">Bolivia</option>
+                            <option value="br">Brasil</option>
+                            <option value="cl">Chile</option>
+                            <option value="co">Colombia</option>
+                            <option value="cu">Cuba</option>
+                            <option value="do">República Dominicana</option>
+                            <option value="ec">Ecuador</option>
+                            <option value="sv">El Salvador</option>
+                            <option value="gt">Guatemala</option>
+                            <option value="ht">Haití</option>
+                            <option value="hn">Honduras</option>
+                            <option value="mx">México</option>
+                            <option value="ni">Nicaragua</option>
+                            <option value="pa">Panamá</option>
+                            <option value="py">Paraguay</option>
+                            <option value="pe">Perú</option>
+                            <option value="pr">Puerto Rico</option>
+                            <option value="uy">Uruguay</option>
+                            <option value="ve">Venezuela</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="state">State</label>
-                        <input type="text" id="state" name="state" required>
+                        <!-- Campo para el estado -->
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="state">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <!-- Campo para la ciudad -->
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div class="form-group">
+                        <!-- Campo para el número de teléfono -->
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber">
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="city">City</label>
-                        <input type="text" id="city" name="city" required>
+                <!-- Enlaces de navegación para usuarios registrados y conductores -->
+                <nav>  
+                    <div class="form-row links">
+                        <span class="link-item">Already a User <a href="index.html" class="link-group">Login Here</a></span>
+                        <span class="link-item">Register as Driver? <a href="driver-register.html" class="link-group">Click here</a></span>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                </div>
-                
-                <!-- Botón de envío del formulario -->
-                <div class="form-row">
-                    <a href="index.html" id="register-button" class="button">Register</a>
-                </div>
-            </form>
-            <p class="login">Already an user? <a href="index.html">Login here</a></p>
-            <p class="login">Register as driver? <a href="driver-register.html">Click here</a></p>
-
-            <footer>
-                <a href="home.html">Home</a>
-                <a href="my-rides.html">Rides</a>
-                <a href="bookins.html">Bookings</a>
-                <a href="settings.html">Settings</a>
-                <a href="index.html">Login</a>
-                <a href="user-register.html">Register</a>
-                <p>&copy; Aventones.com</p>
-            </footer>
-        </section>  
-    </main>
-    <script src="script-register.js"></script>
+                    <!-- Botón de registro -->
+                    <button id="signUpButton" class="buttonSingUp">Sign Up</button>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- Pie de página con enlaces de navegación -->
+    <footer class="footer">
+        <p>
+            <a href="home.html" target="_blank">Home</a> |
+            <a href="my-rides.html" target="_blank">Rides</a> |
+            <a href="bookins.html" target="_blank">Booking</a> |
+            <a href="settings.html" target="_blank">Settings</a> |
+            <a href="index.html" target="_blank">Login</a> |
+            <a href="user-register.html" target="_blank">Register</a>
+        </p>
+        <p>&copy; Aventones.com</p>
+    </footer>
+    <script src="js/register.js"></script> 
 </body>
-
 </html>
