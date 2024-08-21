@@ -6,86 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Andrea Benavides Zúñiga">
     <title>Aventones - My Rides</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles-general.css">
 </head>
 
 <body>
-    <header>
-        <div class="header-top">
-            <img src="img/aventones-logo.png" alt="Aventones Logo" class="logo-rides">
+    <div id="regis" class="hoja-container">
+        <!-- Imagen del logo centrada -->
+        <div class="logo-section">
+            <img src="img/aventones-logo.png" alt="logo">
+            <h1>AVENTONES</h1>
         </div>
-        <div class="header-bottom">
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="my-rides.html" class="active">Rides</a></li>
-                    <li><a href="bookins.html">Bookings</a></li>
-                </ul>
-            </nav>
-            <div class="search-container">
-                <input type="text" placeholder="Search...">
-                <button><img src="img/user-icon.png" alt="User Icon"></button>
-                <div class="dropdown">
-                    <button class="dropbtn">Settings</button>
-                    <div class="dropdown-content">
-                        <a href="index.html">Logout</a>
-                        <a href="settings.html">Settings</a>
-                    </div>
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <!-- Enlaces de navegación -->
+            <a href="home.html" class="nav-link">Home</a>
+            <a id="ridesLink" href="my-rides.html" class="nav-link">Rides</a>
+            <a href="bookins.html" class="nav-link">Booking</a>
+            <input type="text" class="search-input" placeholder="Search...">
+
+            <!-- Icono de perfil con un menú desplegable -->
+            <div class="icon-wrapper" tabindex="0">
+                <i class="fas fa-user" id="profile-icon"></i>
+                <div class="dropdown-menu">
+                    <a href="settings.html" class="dropdown-item">Settings</a>
+                    <a href="index.html" class="dropdown-item">Logout</a>
                 </div>
             </div>
+        </nav>
+        <h5>My Rides</h5>
+
+        <!-- Botón para agregar un nuevo ride -->
+        <a href="new-ride.html" class="new-ride2-btn">New ride</a>
+
+        <div class="home-container">
+            <!-- Tabla de rides -->
+            <table id="ridesTable" class="rides-table">
+                <thead>
+                    <tr>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Seats</th>
+                        <th>Car</th>
+                        <th>Free</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se llenarán los datos con JavaScript -->
+                </tbody>
+            </table>
         </div>
-    </header>
-    <main>
-        <h1>My Rides</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>From</th>
-                    <th>To</th>
-                    <th>Seats</th>
-                    <th>Car</th>
-                    <th>Fee</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a href="#">Quesada</a></td>
-                    <td>Alajuela</td>
-                    <td>2</td>
-                    <td>Nissan Pathfinder 2015</td>
-                    <td>$5</td>
-                    <td><a href="edit-ride.html">Edit</a> | <a href="#">Delete</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Quesada</a></td>
-                    <td>Naranjo</td>
-                    <td>1</td>
-                    <td>Toyota Corolla 2020</td>
-                    <td>$10</td>
-                    <td><a href="edit-ride.html">Edit</a> | <a href="#">Delete</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">Aguas Zarcas</a></td>
-                    <td>Naranjo</td>
-                    <td>1</td>
-                    <td>Ford Festiva 1990</td>
-                    <td>--</td>
-                    <td><a href="edit-ride.html">Edit</a> | <a href="#">Delete</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <a href="new-ride.html" class="button">New Ride</a>
-    </main>
-    <footer>
-        <a href="home.html">Home</a>
-        <a href="my-rides.html">Rides</a>
-        <a href="bookins.html">Bookings</a>
-        <a href="settings.html">Settings</a>
-        <a href="index.html">Login</a>
-        <a href="user-register.html">Register</a>
-        <p>&copy; Aventones.com</p>
-    </footer>
-    </footer>
+        <footer>
+            <a href="home.html">Home</a>
+            <a href="my-rides.html">Rides</a>
+            <a href="bookins.html">Bookings</a>
+            <a href="settings.html">Settings</a>
+            <a href="index.html">Login</a>
+            <a href="user-register.html">Register</a>
+            <p>&copy; Aventones.com</p>
+        </footer>
+    </div>
+    <script></script>
 </body>
-</html>ñ
+
+</html>
