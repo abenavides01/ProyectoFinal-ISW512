@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Obtener los datos del localStorage
     const rides = JSON.parse(localStorage.getItem('rides')) || [];
-    
+
     // Obtener la referencia al cuerpo de la tabla
     const tbody = document.querySelector('#ridesTable tbody');
 

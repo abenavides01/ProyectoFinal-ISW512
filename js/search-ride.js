@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    document.getElementById('btn').addEventListener('click', function(event) {
+    document.getElementById('btn').addEventListener('click', function (event) {
         event.preventDefault();
         searchRides();
     });

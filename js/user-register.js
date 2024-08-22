@@ -1,6 +1,6 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('signUpButton').addEventListener('click', function(event) {
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('signUpButton').addEventListener('click', function (event) {
         event.preventDefault();
 
         const getElementValue = (id) => {

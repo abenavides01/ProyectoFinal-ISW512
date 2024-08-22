@@ -4,79 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Andrea Benavides Zúñiga">
-    <title>Aventones - Bookings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles-general.css">
+    <title>Booking</title>
 </head>
 
 <body>
-    <header>
-        <div class="header-top">
-            <img src="img/aventones-logo.png" alt="Aventones Logo" class="logo-rides">
+    <div id="book" class="hoja-container">
+        <div class="logo-section">
+            <img src="img/aventones-logo.png" alt="logo">
+            <h1>AVENTONES</h1>
         </div>
-        <div class="header-bottom">
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="my-rides.html">Rides</a></li>
-                    <li><a href="bookins.html" class="active">Bookings</a></li>
-                </ul>
-            </nav>
-            <div class="search-container">
-                <input type="text" placeholder="Search...">
-                <button><img src="img/user-icon.png" alt="User Icon"></button>
-                <div class="dropdown">
-                    <button class="dropbtn">Settings</button>
-                    <div class="dropdown-content">
-                        <a href="index.html">Logout</a>
-                        <a href="settings.html">Settings</a>
-                    </div>
+
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <a href="home.html" class="nav-link">Home</a>
+            <a id="ridesLink" href="my-rides.html" class="nav-link">Rides</a>
+            <a href="bookins.html" class="nav-link">Booking</a>
+            <input type="text" class="search-input" placeholder="Search...">
+
+            <div class="icon-wrapper" tabindex="0">
+                <i class="fas fa-user" id="profile-icon"></i>
+                <div class="dropdown-menu">
+                    <a href="settings.html" class="dropdown-item">Settings</a>
+                    <a href="index.html" class="dropdown-item">Logout</a>
                 </div>
             </div>
+        </nav>
+        <h5>Bookings</h5>
+
+        <div class="home-container">
+            <!-- Tabla de rides -->
+            <table class="rides-table">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Ride</th>
+                        <th>Status</th>
+                        <th>Accept/Reject</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingsTable">
+                    <!-- Aquí se llenarán los datos con JavaScript -->
+                </tbody>
+            </table>
         </div>
-    </header>
-    <main>
-        <h1>Bookings</h1>
-        <table class="bookings-table">
-            <thead>
-                <tr>
-                    <th>User</th>
-                    <th>Ride</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <span>fulano</span>
-                    </td>
-                    <td>Ciudad Quesada - Naranjo</td>
-                    <td>
-                        <a href="#" class="accept">Accept</a> |
-                        <a href="#" class="reject">Reject</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span>yluna</span>
-                    </td>
-                    <td>Fortuna - San José</td>
-                    <td>
-                        <a href="#" class="accept">Accept</a> |
-                        <a href="#" class="reject">Reject</a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-    <footer>
-        <a href="home.html">Home</a>
-        <a href="my-rides.html">Rides</a>
-        <a href="bookins.html">Bookings</a>
-        <a href="settings.html">Settings</a>
-        <a href="index.html">Login</a>
-        <a href="user-register.html">Register</a>
+    </div>
+    <hr>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>
+            <a href="home.html" target="_blank">Home</a> |
+            <a href="my-rides.html" target="_blank">Rides</a> |
+            <a href="bookins.html" target="_blank">Booking</a> |
+            <a href="settings.html" target="_blank">Settings</a> |
+            <a href="index.html" target="_blank">Login</a> |
+            <a href="user-register.html" target="_blank">Register</a>
+        </p>
         <p>&copy; Aventones.com</p>
     </footer>
+    <script src="js/bookins.js"></script>
 </body>
+
 </html>

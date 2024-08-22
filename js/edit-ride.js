@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             days.push(checkbox.value);
         });
 
-        // Crear un objeto con los valores del formulario
+        // Crear un objeto con los valores del formulario para cargarlos
         const updatedRide = {
             departure,
             arrival,

@@ -1,120 +1,136 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Andrea Benavides Zúñiga">
-    <title>Settings Edit Profile - Aventones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles-general.css">
+    <title>Edit Profile</title>
 </head>
 
 <body>
-    <header>
-        <div class="header-top">
-            <img src="img/aventones-logo.png" alt="Aventones Logo" class="logo-rides">
+    <div id="ride" class="hoja-container">
+        <div class="logo-section">
+            <img src="img/aventones-logo.png" alt="logo">
+            <h1>AVENTONES</h1>
         </div>
-        <div class="header-bottom">
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="my-rides.html">Rides</a></li>
-                    <li><a href="bookins.html">Bookings</a></li>
-                </ul>
-            </nav>
-            <div class="search-container">
-                <input type="text" placeholder="Search...">
-                <button><img src="img/user-icon.png" alt="User Icon"></button>
-                <div class="dropdown">
-                    <button class="dropbtn">Settings</button>
-                    <div class="dropdown-content">
-                        <a href="index.html">Logout</a>
-                        <a href="settings.html">Settings</a>
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <a href="home.html" class="nav-link">Home</a>
+            <a id="ridesLink" href="my-rides.html" class="nav-link">Rides</a>
+            <a href="bookins.html" class="nav-link">Booking</a>
+            <input type="text" class="search-input" placeholder="Search...">
+            <div class="icon-wrapper" tabindex="0">
+                <i class="fas fa-user" id="profile-icon"></i>
+                <div class="dropdown-menu">
+                    <a href="settings.html" class="dropdown-item">Settings</a>
+                    <a href="index.html" class="dropdown-item">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+        <h5>Eddit Profile</h5>
+
+        <!-- Contenedor para el formulario de registro -->
+        <div class="registro-container">
+            <div class="regis">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="FirstName">First Name:</label>
+                        <input type="text" id="FirstName" name="FirstName">
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last Name:</label>
+                        <input type="text" id="LastName" name="LastName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="Email">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="Password">Password:</label>
+                        <input type="password" id="Password" name="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="RepeatPassword">Repeat Password:</label>
+                        <input type="password" id="RepeatPassword" name="RepeatPassword">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Address">Address:</label>
+                    <input type="text" id="Address">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="Country">Country:</label>
+                        <select id="Country" name="Country">
+                            <option value="" disabled selected>Select your country</option>
+                            <option value="cr">Costa Rica</option>
+                            <option value="ar">Argentina</option>
+                            <option value="bo">Bolivia</option>
+                            <option value="br">Brasil</option>
+                            <option value="cl">Chile</option>
+                            <option value="co">Colombia</option>
+                            <option value="cu">Cuba</option>
+                            <option value="do">República Dominicana</option>
+                            <option value="ec">Ecuador</option>
+                            <option value="sv">El Salvador</option>
+                            <option value="gt">Guatemala</option>
+                            <option value="ht">Haití</option>
+                            <option value="hn">Honduras</option>
+                            <option value="mx">México</option>
+                            <option value="ni">Nicaragua</option>
+                            <option value="pa">Panamá</option>
+                            <option value="py">Paraguay</option>
+                            <option value="pe">Perú</option>
+                            <option value="pr">Puerto Rico</option>
+                            <option value="uy">Uruguay</option>
+                            <option value="ve">Venezuela</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="State">State:</label>
+                        <input type="text" id="State" name="State">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="City">City:</label>
+                        <input type="text" id="City" name="City">
+                    </div>
+                    <div class="form-group">
+                        <label for="PhoneNumber">Phone Number:</label>
+                        <input type="text" id="PhoneNumber" name="PhoneNumber">
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <main>
-        <h1>Edit Profile</h1>
-        <form action="/register" method="POST">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="first-name" value="Andrea">
-                </div>
-                <div class="form-group">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last-name" value="Benavides">
-                </div>
-            </div>
 
-            <div class="form-row">
-                <div class="form-group full-width">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" value="andrepaobena@gmail.com">
-                </div>
-            </div>
+        <div class="button-container">
+            <a href="home.html" class="new-ride2-btn right-btn">Cancel</a>
+            <a href="home.html" id="saveButton" class="new-ride2-btn left-btn">Save</a>
+        </div>
+    </div>
+    <hr>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-group">
-                    <label for="repeat-password">Repeat Password</label>
-                    <input type="password" id="repeat-password" name="repeat-password" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group full-width">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address"
-                        value="Casa al lado abajo del Acueducto de La Marina">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="country">Country</label>
-                    <select id="country" name="country">
-                        <option value="usa">United States</option>
-                        <option value="canada">Canada</option>
-                        <option value="mexico">Mexico</option>
-                        <option value="costa-rica" selected>Costa Rica</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="state">State</label>
-                    <input type="text" id="state" name="state" value="Alajuela">
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="text" id="city" name="city" value="La Marina">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" value="84682862">
-                </div>
-            </div>
-            <div class="form-actions">
-                <a href="home.html" class="cancel">Cancel</a>
-                <a href="home.html" class="button">Save</a>
-            </div>
-        </form>
-    </main>
-    <footer>
-        <a href="home.html">Home</a>
-        <a href="my-rides.html">Rides</a>
-        <a href="bookins.html">Bookings</a>
-        <a href="settings.html">Settings</a>
-        <a href="index.html">Login</a>
-        <a href="user-register.html">Register</a>
+    <footer class="footer">
+        <p>
+            <a href="home.html" target="_blank">Home</a> |
+            <a href="my-rides.html" target="_blank">Rides</a> |
+            <a href="bookins.html" target="_blank">Booking</a> |
+            <a href="settings.html" target="_blank">Settings</a> |
+            <a href="index.html" target="_blank">Login</a> |
+            <a href="user-register.html" target="_blank">Register</a>
+        </p>
         <p>&copy; Aventones.com</p>
     </footer>
+
+    <script src="js/info-user.js"></script>
+    <script src="js/edit-user.js"></script>
+
 </body>
+
 </html>

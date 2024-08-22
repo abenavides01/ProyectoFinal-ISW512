@@ -22,7 +22,7 @@ document.getElementById('saveButton').addEventListener('click', function (event)
 
     // Crear un objeto con los valores del formulario
     const rideData = {
-        driverName, // Guardar el nombre del conductor
+        driverName,
         departure,
         arrival,
         days,

@@ -1,4 +1,4 @@
-document.getElementById('signUpButton').addEventListener('click', function(event) {
+document.getElementById('signUpButton').addEventListener('click', function (event) {
     event.preventDefault();
 
     const firstName = document.getElementById('firstName').value;
