@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Verificar si el usuario ha iniciado sesión
     if (!currentUser) {
         alert('Por favor, inicie sesión primero.');
-        window.location.href = 'Login.html'; // Redirigir a la página de inicio de sesión si no hay usuario
+        window.location.href = 'index.html'; // Redirigir a la página de inicio de sesión si no hay usuario
         return;
     }
 
@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 <td data-label="Car">${ride.make} ${ride.model}</td>
                 <td data-label="Free">${ride.fee > 0 ? 'No' : 'Yes'}</td>
                 <td data-label="Actions">
-                    <a href="VerRide.html?index=${index}">View</a>| 
-                    <a href="EdditRide.html?index=${index}">Edit</a>| 
+                    <a href="view-ride.html?index=${index}">View</a>| 
+                    <a href="edit-ride.html?index=${index}">Edit</a>| 
                     <a href="#" class="delete-btn" data-index="${index}">Delete</a>
                 </td>
             `;

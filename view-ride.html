@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles-general.css">
+    <title>View Ride</title>
+</head>
+
+<body>
+    <div id="view-ride" class="hoja-container">
+        <!-- Imagen del logo centrada -->
+        <div class="logo-section">
+            <img src="img/aventones-logo.png" alt="logo">
+            <h1>AVENTONES</h1>
+        </div>
+        <!-- Barra de navegación -->
+        <nav class="navbar">
+            <a href="home.html" class="nav-link">Home</a>
+            <a id="ridesLink" href="my-rides.html" class="nav-link">Rides</a>
+            <a href="bookins.html" class="nav-link">Booking</a>
+            <input type="text" class="search-input" placeholder="Search...">
+
+            <!-- Icono de perfil con un menú desplegable -->
+            <div class="icon-wrapper" tabindex="0">
+                <i class="fas fa-user" id="profile-icon"></i>
+                <div class="dropdown-menu">
+                    <a href="settings.html" class="dropdown-item">Settings</a>
+                    <a href="index.html" class="dropdown-item">Logout</a>
+                </div>
+            </div>
+        </nav>
+        <h5>View Ride</h5>
+
+        <!-- Contenedor para mostrar los detalles del viaje -->
+        <div class="ride-details">
+            <p><strong>From:</strong> <span id="departure"></span></p>
+            <p><strong>To:</strong> <span id="arrival"></span></p>
+            <p><strong>Seats:</strong> <span id="seats"></span></p>
+            <p><strong>Car:</strong> <span id="car"></span></p>
+            <p><strong>Free:</strong> <span id="fee"></span></p>
+            <a href="my-rides.html" class="new-ride2-btn">Back</a>
+        </div>
+    </div>
+    <script src="js/view-ride.js"></script>
+</body>
+
+</html>

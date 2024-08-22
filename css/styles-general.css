@@ -1,6 +1,6 @@
 
 :root {
-  --default-height: 500px; /* Altura por defecto */
+  --default-height: 800px; /* Altura por defecto */
   --hoja-container-height-ride: 1100px; /* Altura específica para el ID ride */
   --hoja-container-height-regis: 1000px; /* Altura específica para el ID regis */
   --hoja-container-height-book: 700px;

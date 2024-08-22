@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <td data-label="Seats">${ride.seats}</td>
                     <td data-label="Car">${ride.make} ${ride.model}</td>
                     <td data-label="Fee">${ride.fee > 0 ? '$' + ride.fee : 'Free'}</td>
-                    <td data-label="Actions"><a href="Booking.html">Request</a></td>
+                    <td data-label="Actions"><a href="bookins.html">Request</a></td>
                 `;
                 tbody.appendChild(row);
             });
